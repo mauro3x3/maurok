@@ -1,1 +1,1 @@
-[adammaj.com](https://adammaj.com)
+[maurokjaer.com](https://maurokjaer.com)    
