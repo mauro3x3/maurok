@@ -71,11 +71,11 @@ function Layout({ children }: PropsWithChildren) {
             <Text fontWeight="bold" fontSize="smaller">
               FIND ME ON
             </Text>
-            <Navigation link="https://twitter.com/majmudaradam" isExternal>
+            <Navigation link="https://twitter.com/anestimov" isExternal>
               Twitter
             </Navigation>
-            <Navigation link="https://github.com/adam-maj" isExternal>
-              GitHub
+            <Navigation link="youtube.com" isExternal>
+              YouTube
             </Navigation>
           </VStack>
         </VStack>
@@ -130,13 +130,13 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="FIND ME ON">
                     <VStack align="flex-start" px={4} spacing={3} mb={2}>
                       <Navigation
-                        link="https://twitter.com/majmudaradam"
+                        link="https://twitter.com/anestimov"
                         isExternal
                       >
                         Twitter
                       </Navigation>
-                      <Navigation link="https://github.com/adam-maj" isExternal>
-                        GitHub
+                      <Navigation link="youtube.com" isExternal>
+                        YouTube
                       </Navigation>
                     </VStack>
                   </MenuGroup>

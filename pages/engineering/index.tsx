@@ -20,7 +20,7 @@ interface EngineeringProps {
 const Engineering: NextPageWithLayout<EngineeringProps> = ({ builds }) => {
   return (
     <>
-      <NextSeo title="Engineering | Adam Majmudar" />
+      <NextSeo title="Engineering | Mauro Kjær" />
       <Flex direction="column" align="flex-start">
         {builds.map((build) => (
           <Stack width="100%" key={build.title}>

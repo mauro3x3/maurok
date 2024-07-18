@@ -54,7 +54,7 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
 
   return (
     <>
-      <NextSeo title="Books | Adam Majmudar" />
+      <NextSeo title="Books | Mauro" />
       <Stack spacing={5}>
         {books
           .slice()
