@@ -64,7 +64,7 @@ function Layout({ children }: PropsWithChildren) {
               NAVIGATION
             </Text>
             <Navigation link="/">Home</Navigation>
-            <Navigation link="/writing">Writing</Navigation>
+            <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
             <Navigation link="/books">Books</Navigation>
           </VStack>
           <VStack align="flex-start">
