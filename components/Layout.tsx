@@ -108,7 +108,7 @@ function Layout({ children }: PropsWithChildren) {
             <Flex justify="space-between" width="100%">
               <HStack spacing={8}>
                 <Navigation link="/">Home</Navigation>
-                <Navigation link="/writing">Writing</Navigation>
+                <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
                 <Navigation link="/books">Books</Navigation>
               </HStack>
               <Menu>
@@ -123,7 +123,7 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="NAVIGATION">
                     <VStack align="flex-start" px={4} spacing={3} mb={4}>
                       <Navigation link="/">Home</Navigation>
-                      <Navigation link="/writing">Writing</Navigation>
+                      <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
                       <Navigation link="/books">Books</Navigation>
                     </VStack>
                   </MenuGroup>

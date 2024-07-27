@@ -20,12 +20,7 @@ const Post: NextPageWithLayout<PostProps> = ({ post }) => {
         openGraph={{
           title: post.metadata.title,
           description: post.metadata.description,
-          images: [
-            {
-              url:
-                post.metadata.image || "https://adammaj.com/og-image-dark.jpg",
-            },
-          ],
+          
         }}
       />
       <Flex direction="column" gap={2}>

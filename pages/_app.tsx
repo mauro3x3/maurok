@@ -66,12 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
           title: "Mauro",
           description:
             "I'm a constant learner and aspiring technical generalist. I'm also a founding enginer at thirdweb and on gap year from the University of Pennsylvania.",
-          images: [
-            {
-              url: "https://adammaj.com/og-image-dark.jpg",
-              type: "image/jpeg",
-            },
-          ],
+          
           siteName: "Mauro",
         }}
       />
