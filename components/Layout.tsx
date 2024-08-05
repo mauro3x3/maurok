@@ -74,7 +74,7 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://twitter.com/maurokjaer" isExternal>
               Twitter
             </Navigation>
-            <Navigation link="youtube.com" isExternal>
+            <Navigation link="https://www.youtube.com/channel/UCG6Ty3jK1fIGAL_3_9KNraQ" isExternal>
               YouTube
             </Navigation>
           </VStack>
@@ -135,7 +135,7 @@ function Layout({ children }: PropsWithChildren) {
                       >
                         Twitter
                       </Navigation>
-                      <Navigation link="youtube.com" isExternal>
+                      <Navigation link="https://www.youtube.com/channel/UCG6Ty3jK1fIGAL_3_9KNraQ" isExternal>
                         YouTube
                       </Navigation>
                     </VStack>

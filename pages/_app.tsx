@@ -61,11 +61,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <DefaultSeo
         title="Mauro"
-        description="I'm a constant learner and aspiring technical generalist. I'm also a founding enginer at thirdweb and on gap year from the University of Pennsylvania."
+        description="I'm a constant learner. Currenty studying Commercial Law @Aalborg University "
         openGraph={{
           title: "Mauro",
           description:
-            "I'm a constant learner and aspiring technical generalist. I'm also a founding enginer at thirdweb and on gap year from the University of Pennsylvania.",
+            "I'm a constant learner. Currenty studying Commercial Law @Aalborg University.",
           
           siteName: "Mauro",
         }}
