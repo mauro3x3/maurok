@@ -71,7 +71,11 @@ function Layout({ children }: PropsWithChildren) {
             <Text fontWeight="bold" fontSize="smaller">
               FIND ME ON
             </Text>
+<<<<<<< HEAD
             <Navigation link="https://twitter.com/realmaurokjaer" isExternal>
+=======
+            <Navigation link="https://twitter.com/maurokjaer" isExternal>
+>>>>>>> 2d86fd59b77216dfa407f8cec9c015e0b18cec8f
               Twitter
             </Navigation>
             <Navigation link="https://www.youtube.com/channel/UCG6Ty3jK1fIGAL_3_9KNraQ" isExternal>
@@ -130,7 +134,11 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="FIND ME ON">
                     <VStack align="flex-start" px={4} spacing={3} mb={2}>
                       <Navigation
+<<<<<<< HEAD
                         link="https://twitter.com/realmaurokjaer"
+=======
+                        link="https://twitter.com/maurokjaer"
+>>>>>>> 2d86fd59b77216dfa407f8cec9c015e0b18cec8f
                         isExternal
                       >
                         Twitter
