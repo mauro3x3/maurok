@@ -66,7 +66,6 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/">Home</Navigation>
             <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
             <Navigation link="/books">Books</Navigation>
-            <Navigation link="/travel">Travel Map</Navigation>
           </VStack>
           <VStack align="flex-start">
             <Text fontWeight="bold" fontSize="smaller">
@@ -111,7 +110,6 @@ function Layout({ children }: PropsWithChildren) {
                 <Navigation link="/">Home</Navigation>
                 <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
                 <Navigation link="/books">Books</Navigation>
-                <Navigation link="/travel">Travel Map</Navigation>
               </HStack>
               <Menu>
                 <MenuButton
@@ -127,7 +125,6 @@ function Layout({ children }: PropsWithChildren) {
                       <Navigation link="/">Home</Navigation>
                       <Navigation link="https://maurok333.substack.com/">Writing</Navigation>
                       <Navigation link="/books">Books</Navigation>
-                      <Navigation link="/travel">Travel Map</Navigation>
                     </VStack>
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">
