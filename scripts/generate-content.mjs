@@ -2,6 +2,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import fs from "fs";
 
+if (process.argv.includes("--production")) {
+  process.env.NODE_ENV = "production";
+}
+
 async function writing() {
   const metadata = [];
   const basePath = path.join(process.cwd(), "content", "writing");
