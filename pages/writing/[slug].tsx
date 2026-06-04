@@ -20,13 +20,12 @@ const Post: NextPageWithLayout<PostProps> = ({ post }) => {
         openGraph={{
           title: post.metadata.title,
           description: post.metadata.description,
-          
         }}
       />
       <Flex direction="column" gap={2}>
         <Heading size="lg">{post.metadata.title}</Heading>
         <Prose>
-          <MDXRemote compiledSource={post.source} />
+          <MDXRemote compiledSource={post.source} scope={{}} frontmatter={{}} />
         </Prose>
       </Flex>
     </>
