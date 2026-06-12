@@ -6,7 +6,6 @@ import {
   Heading,
   Image,
   Center,
-  useDimensions,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
@@ -27,7 +26,19 @@ export function Bookshelf({ books }: BookshelfProps) {
   const viewportRef = React.useRef<HTMLDivElement>(null);
   const scrollRightRef = React.useRef<HTMLDivElement>(null);
   const scrollLeftRef = React.useRef<HTMLDivElement>(null);
-  const viewportDimensions = useDimensions(viewportRef, true);
+  const [viewportWidth, setViewportWidth] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setViewportWidth(entry.contentRect.width);
+      }
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   const [isScrolling, setIsScrolling] = React.useState(false);
   const [booksInViewport, setBooksInViewport] = React.useState(0);
   const scrollEvents = useBreakpointValue({
@@ -59,10 +70,10 @@ export function Bookshelf({ books }: BookshelfProps) {
   const boundedRelativeScroll = React.useCallback(
     (incrementX: number) => {
       setScroll((_scroll) =>
-        Math.max(minScroll, Math.min(maxScroll, _scroll + incrementX))
+        Math.max(minScroll, Math.min(maxScroll, _scroll + incrementX)),
       );
     },
-    [maxScroll]
+    [maxScroll],
   );
 
   React.useEffect(() => {
@@ -70,7 +81,7 @@ export function Bookshelf({ books }: BookshelfProps) {
       const idx = books.findIndex((b) =>
         b.slug
           .toLowerCase()
-          .includes((router.query.slug as string[])[0].toLowerCase())
+          .includes((router.query.slug as string[])[0].toLowerCase()),
       );
       setBookIndex(idx);
     }
@@ -86,12 +97,12 @@ export function Bookshelf({ books }: BookshelfProps) {
   }, [bookIndex, boundedRelativeScroll]);
 
   React.useEffect(() => {
-    if (viewportDimensions) {
+    if (viewportWidth !== null) {
       boundedRelativeScroll(0);
-      const numberOfBooks = viewportDimensions.contentBox.width / (width + 11);
+      const numberOfBooks = viewportWidth / (width + 11);
       setBooksInViewport(numberOfBooks);
     }
-  }, [viewportDimensions, boundedRelativeScroll]);
+  }, [viewportWidth, boundedRelativeScroll]);
 
   React.useEffect(() => {
     if (!scrollEvents) {
@@ -130,20 +141,20 @@ export function Bookshelf({ books }: BookshelfProps) {
 
     currentScrollRightRef!.addEventListener(
       currentScrollEvents.start,
-      setScrollRightInterval
+      setScrollRightInterval,
     );
     currentScrollRightRef!.addEventListener(
       currentScrollEvents.stop,
-      clearScrollInterval
+      clearScrollInterval,
     );
 
     currentScrollLeftRef!.addEventListener(
       currentScrollEvents.start,
-      setScrollLeftInterval
+      setScrollLeftInterval,
     );
     currentScrollLeftRef!.addEventListener(
       currentScrollEvents.stop,
-      clearScrollInterval
+      clearScrollInterval,
     );
 
     return () => {
@@ -151,20 +162,20 @@ export function Bookshelf({ books }: BookshelfProps) {
 
       currentScrollRightRef!.removeEventListener(
         currentScrollEvents.start,
-        setScrollRightInterval
+        setScrollRightInterval,
       );
       currentScrollRightRef!.removeEventListener(
         currentScrollEvents.stop,
-        clearScrollInterval
+        clearScrollInterval,
       );
 
       currentScrollLeftRef!.removeEventListener(
         currentScrollEvents.start,
-        setScrollLeftInterval
+        setScrollLeftInterval,
       );
       currentScrollLeftRef!.removeEventListener(
         currentScrollEvents.stop,
-        clearScrollInterval
+        clearScrollInterval,
       );
     };
   }, [boundedRelativeScroll]);
